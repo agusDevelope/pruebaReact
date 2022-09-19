@@ -71,7 +71,7 @@ namespace backendEmpleados.Controllers
             return new JsonResult("Agregado Exitosamente");
         }
 
-        [HttpPut("{id}")]
+        [HttpPut]
         public JsonResult Put(Area area)
         {
             string query = @"
