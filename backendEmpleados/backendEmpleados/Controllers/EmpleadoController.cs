@@ -85,11 +85,11 @@ namespace backendEmpleados.Controllers
         public JsonResult Put(Empleado emp)
         {
             string query = @"
-                update dbo.areas
+                update dbo.empleados
                        set nomEmp = @nomEmp , nomArea= @nomArea,  
                             fechaInicio=@fechaInicio, fechaFin= @fechaFin,
                             email = @email, foto = @foto
-                            where idArea = @idArea
+                            where idEmp = @idEmp
                         ";
 
             DataTable table = new DataTable();

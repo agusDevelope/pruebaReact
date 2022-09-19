@@ -26,7 +26,7 @@ export class Empleados extends Component{
         fetch(variables.API_URL+'Empleado')
         .then(response=>response.json())
         .then(data=>{
-            this.setState({employees:data});
+            this.setState({empleados:data});
         });
 
         fetch(variables.API_URL+'Area')
@@ -58,7 +58,7 @@ export class Empleados extends Component{
 
     addClick(){
         this.setState({
-            modalTitle:"Agregar Empleado",
+            modalTitle:"Agregar Empleado",//empleadoModel
             idEmp:0,
             nomEmp:"",
             nomArea:"",
@@ -82,7 +82,7 @@ export class Empleados extends Component{
     }
 
     createClick(){
-        fetch(variables.API_URL+'Empleafo',{
+        fetch(variables.API_URL+'Empleado',{
             method:'POST',
             headers:{
                 'Accept':'application/json',
